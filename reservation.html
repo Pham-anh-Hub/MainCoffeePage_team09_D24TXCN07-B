@@ -94,19 +94,19 @@
                             <h1 class="text-white mb-4 mt-5">Book Your Table</h1>
                             <form class="mb-5">
                                 <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Name" required="required">
+                                    <input type="text" class="form-control bg-transparent border-primary p-4 name" placeholder="Name" required="required" >
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email" required="required">
+                                    <input type="email" class="form-control bg-transparent border-primary p-4 email" placeholder="Email" required="required">
                                 </div>
                                 <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker">
+                                    <div>
+                                        <input type="date" class="form-control bg-transparent border-primary p-4 date" placeholder="Date" data-target="#date" >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker">
+                                    <div>
+                                        <input type="date" class="form-control bg-transparent border-primary p-4 time" placeholder="Time" data-target="#time" >
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -120,7 +120,7 @@
                                 </div>
                                 
                                 <div>
-                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-primary btn-block font-weight-bold py-3 bookingBtn" type="submit">Book Now</button>
                                 </div>
                             </form>
                         </div>
@@ -143,7 +143,6 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -162,12 +161,12 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <p>Nhập email để được đặt lịch ngay hôm nay</p>
                 <div class="w-100">
                     <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <input type="text" class="form-control border-light signUpEmail" style="padding: 25px;" placeholder="Your Email">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <button class="btn btn-primary font-weight-bold px-3 signUp">Sign Up</button>
                         </div>
                     </div>
                 </div>
@@ -198,6 +197,7 @@
     <!-- Contact Javascript File -->
     <script src="./lib//mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script src="./lib/reservation/reservation.js"></script>
 
     <!-- Template Javascript -->
     <script src="./js/main.js"></script>
