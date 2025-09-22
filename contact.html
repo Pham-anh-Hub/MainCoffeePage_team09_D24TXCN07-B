@@ -3,105 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <title>Contact Us - Coffee Shop</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-      }
-      header {
-        background: #3e2723;
-        padding: 15px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .logo {
-        color: #fff;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
-      }
-      .nav-links a {
-        color: #fff;
-        text-decoration: none;
-        padding: 5px 10px;
-      }
-      .nav-links a.active,
-      .nav-links a:hover {
-        background: #6d4c41;
-        border-radius: 4px;
-      }
-      .page-header {
-        background: url("coffee-bg.jpg") center/cover no-repeat;
-        color: #fff;
-        text-align: center;
-        padding: 60px 20px;
-      }
-      .content {
-        padding: 20px;
-        max-width: 800px;
-        margin: auto;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 20px;
-      }
-      input,
-      textarea {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      button {
-        background: #3e2723;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-      button:hover {
-        background: #6d4c41;
-      }
-      footer {
-        background: #3e2723;
-        color: #fff;
-        text-align: center;
-        padding: 15px;
-        margin-top: 40px;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/contact.css" />
   </head>
   <body>
-    <header>
+    <!-- Navbar -->
+    <header
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      "
+    >
       <nav class="navbar">
-        <a href="index.html" class="logo">Coffee Shop</a>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+        <h1 style="font-size: 50px">KOPPEE</h1>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./service.html">Service</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li>
+            <select onchange="if(this.value) location.href=this.value;">
+              <option value="">Pages</option>
+              <option value="reservation.html">Reservation</option>
+              <option value="testimonial.html">Testimonial</option>
+            </select>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div
+        style="
+        color: #fefaf4;
+        border-color: transparent;
+          background-size: contain;
+            background-image: url(./img/overlay-bottom.png);
+        "
+      >
+        .
+      </div>
     </header>
 
-    <section class="page-header">
+    <section
+      style="margin-top: 10rem; border: 1px solid blue; color: black"
+      class="page-header"
+    >
       <h1>Contact Us</h1>
     </section>
 
     <main class="content">
+      <h1>Contact</h1>
       <p>
         If you have any questions, feel free to contact us using the form below.
       </p>

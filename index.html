@@ -2,67 +2,239 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>KOPPEE - Coffee Shop</title>
+    <title>Coffee Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- <link rel="stylesheet" href="./css/style.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- Navbar -->
-    <header>
-      <nav>
-        <h1>KOPPEE</h1>
-        <div>
-          <a href="./index.html">Home</a>
-          <a href="./about.html">About</a>
-          <a href="./">Service</a>
-          <a href="./menu.html">Menu</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
+    <div>
+      <!-- Navbar -->
+      <header>
+        <nav class="navbar">
+          <h1 style="font-size: 50px">KOPPEE</h1>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./service.html">Service</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li>
+              <select onchange="if(this.value) location.href=this.value;">
+                <option value="">Pages</option>
+                <option value="reservation.html">Reservation</option>
+                <option value="testimonial.html">Testimonial</option>
+              </select>
+            </li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <!-- Slider -->
-    <div class="slider">
-      <div class="slides" id="slides">
-        <img src="img/carousel-1.jpg" alt="Coffee 1" />
-        <img src="img/carousel-2.jpg" alt="Coffee 2" />
-        <img src="img/carousel-3.jpg" alt="Coffee 3" />
+      <!-- Slider -->
+      <div class="slider">
+        <div class="slides" id="slides">
+          <div
+            class="slide"
+            style="background-image: url('img/carousel-1.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('img/carousel-2.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('img/carousel-3.jpg')"
+          ></div>
+        </div>
+        
+        <!-- Nội dung cố định -->
+        <div class="content">
+          <h3 style="font-size: 3rem">We Have Been Serving</h3>
+          <h1 style="font-size: 6rem">COFFEE</h1>
+          <p style="font-size: 2rem; font-weight: 600">* SINCE 1950 *</p>
+        </div>
+
+        <button class="prevSlide" onclick="prevSlide()">❮</button>
+        <button class="nextSlide" onclick="nextSlide()">❯</button>
       </div>
-      <button class="prevSlide" onclick="prevSlide()">❮</button>
-      <button class="nextSlide" onclick="nextSlide()">❯</button>
     </div>
 
     <!-- About -->
-    <section>
-      <h2>About Us</h2>
-      <p>Serving coffee since 1950 with love and passion.</p>
+    <div
+      style="
+        border: 1px solid #d4a055;
+        height: 10rem;
+        width: 0;
+        margin: 20px auto;
+      "
+    ></div>
+    <section class="about-section container-fluid">
+      <h2 style="font-size: 2rem; color: #d4a055">About Us</h2>
+      <h1
+        style="font-size: 4rem; color: #472518; width: 50%; text-align: center"
+      >
+        Serving coffee since 2020
+      </h1>
+      <img
+        src="https://themewagon.github.io/Koppee/img/about.png"
+        alt=""
+        srcset=""
+      />
     </section>
 
     <!-- Services -->
-    <section>
-      <h2>Our Services</h2>
+    <section class="service-section">
+      <h2 style="font-size: 2rem; color: #472518">Our Services</h2>
       <div class="services">
-        <div class="card">🚚 Fast Delivery</div>
-        <div class="card">☕ Fresh Coffee</div>
-        <div class="card">🏆 Best Quality</div>
-        <div class="card">📅 Online Booking</div>
+        <div class="card">
+          <img
+            style="width: 12vw; border-radius: 50%"
+            src="https://img.freepik.com/premium-vector/coffee-delivery-service_410429-21188.jpg"
+            alt=""
+          />
+          <div>
+            <h1>Fastest Door Delivery</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              necessitatibus accusantium corrupti eum mollitia tempore autem,
+              quos ipsum vel natus nesciunt.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            style="width: 12vw; border-radius: 50%"
+            src="https://5.imimg.com/data5/SELLER/Default/2023/9/341652765/RC/GF/XO/143067805/roasted-coffee-beans-arabica-cherry-peaberry-500x500.jpg"
+            alt=""
+          />
+          <div>
+            <h1>Fresh Coffee Beans</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              necessitatibus accusantium corrupti eum mollitia tempore autem,
+              quos ipsum vel natus nesciunt.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            style="width: 12vw; border-radius: 50%"
+            src="https://sleepyowl.co/cdn/shop/files/YHF02067_8_8_-min.jpg?v=1662617133"
+            alt=""
+          />
+          <div>
+            <h1>Best Quality Coffee</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              necessitatibus accusantium corrupti eum mollitia tempore autem,
+              quos ipsum vel natus nesciunt.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            style="width: 12vw; border-radius: 50%; height: 12vw"
+            src="https://media.istockphoto.com/id/1297364206/photo/elegant-restaurant-table-setting-service-for-reception-with-reserved-card.jpg?s=612x612&w=0&k=20&c=u1xdq9GCv4sHfZCilPz3lvOL9R4YYyE8UAE3KyXya8E="
+            alt=""
+          />
+          <div>
+            <h1>Fast Delivery</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              necessitatibus accusantium corrupti eum mollitia tempore autem,
+              quos ipsum vel natus nesciunt.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Menu -->
-    <section>
+    <section class="menu-section">
       <h2>Our Menu</h2>
-      <div class="menu">
-        <div class="card">$5 - Black Coffee</div>
-        <div class="card">$7 - Chocolate Coffee</div>
-        <div class="card">$9 - Coffee with Milk</div>
-      </div>
+      <a href="./menu.html"><button>See More</button></a>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 KOPPEE Coffee Shop. All rights reserved.</p>
+    <!-- Footer Start -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- GET IN TOUCH -->
+        <div class="footer-col">
+          <h4 style="font-size: 2rem; color: #ccc7c5">GET IN TOUCH</h4>
+          <p style="font-size: 20px; color: #ccc7c5">
+            <i class="fa fa-map-marker-alt"></i> 123 Street, New York, USA
+          </p>
+          <p style="font-size: 20px; color: #ccc7c5">
+            <i class="fa fa-phone-alt"></i> +012 345 67890
+          </p>
+          <p style="font-size: 20px; color: #ccc7c5">
+            <i class="fa fa-envelope"></i> info@example.com
+          </p>
+        </div>
+
+        <!-- FOLLOW US -->
+        <div class="footer-col">
+          <h4 style="font-size: 2rem; color: #ccc7c5">FOLLOW US</h4>
+          <p style="font-size: 20px; color: #ccc7c5">
+            Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum
+          </p>
+          <div class="social-links">
+            <a style="font-size: 20px; color: #ccc7c5" href="https://x.com/"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              style="font-size: 20px; color: #ccc7c5"
+              href="https://www.facebook.com"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              style="font-size: 20px; color: #ccc7c5"
+              href="https://www.linkedin.com/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              style="font-size: 20px; color: #ccc7c5"
+              href="https://www.instagram.com/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- OPEN HOURS -->
+        <div class="footer-col">
+          <h4 style="font-size: 2rem; color: #ccc7c5">OPEN HOURS</h4>
+          <h6 style="font-size: 1.1rem; color: #ccc7c5">MONDAY - FRIDAY</h6>
+          <p style="font-size: 15px; color: #ccc7c5">8.00 AM - 8.00 PM</p>
+          <h6 style="font-size: 1.1rem; color: #ccc7c5">SATURDAY - SUNDAY</h6>
+          <p style="font-size: 15px; color: #ccc7c5">2.00 PM - 8.00 PM</p>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-col">
+          <h4 style="font-size: 2rem; color: #ccc7c5">NEWSLETTER</h4>
+          <p style="font-size: 20px; color: #ccc7c5">
+            Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum
+          </p>
+        </div>
+      </div>
+
+      <!-- bottom -->
+      <div class="footer-bottom">
+        <p style="font-size: 15px">
+          Copyright © <b>Domain</b>. All Rights Reserved.
+        </p>
+        <p style="font-size: 15px">
+          Designed by <b>HTML Codex</b> | Distributed by <b>ThemeWagon</b>
+        </p>
+      </div>
     </footer>
+
+    <!-- Footer End -->
 
     <!-- JS for slider -->
     <script>
