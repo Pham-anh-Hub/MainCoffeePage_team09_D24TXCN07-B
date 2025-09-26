@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/booking.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 style="font-size: 50px">KOPPEE</h1>
+      </nav>
+    </header>
+    <main>
+      <div class="table-booking-list">
+        <h1 class="">Booking</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Customer</th>
+              <th>Email</th>
+              <th>Book Time</th>
+              <th>Reserve Time</th>
+              <th colspan="2">Action</th>
+            </tr>
+          </thead>
+          <tbody class="list-books" id="list-bookings"></tbody>
+        </table>
+        <div id="pagination">
+          <button id="PrevBtnBox">&#60;</button>
+          <div id="numberPageElement"></div>
+
+          <button id="NextBtnBox">&#62;</button>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bookings.js"></script>
+  </body>
+</html>
