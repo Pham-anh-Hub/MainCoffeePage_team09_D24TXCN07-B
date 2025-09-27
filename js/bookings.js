@@ -38,8 +38,6 @@ function renderBookingList() {
         `;
         } else if (booking.status === "done") {
             actionHTML = `<span style="color: green; font-weight: bold;">Đã hoàn thành</span>`;
-        } else if (booking.status === "cancelled") {
-            actionHTML = `<span style="color: red; font-weight: bold;">Đã hủy</span>`;
         }
 
         tableListBooking.innerHTML += `
@@ -47,8 +45,8 @@ function renderBookingList() {
             <td id="idBooking">${i + 1}</td>
             <td id="bookingClient">${booking.name}</td>
             <td id="bookingEmailClient">${booking.email}</td>
-            <td id="bookingTime">${booking.time}</td>
-            <td id="reserveTime">${booking.date}</td>
+            <td id="reserveTime">${(booking.reserveTime)} ${booking.reserveDate}</td>
+            <td id="bookingTime">${JSON.stringify(booking.bookingDateTime)}</td>
             <td id="actionToBooking">${actionHTML}</td>
         </tr>`;
     }
@@ -115,16 +113,18 @@ const cancelBookingInfor = (email) => {
     if (confirm("Bạn có chắc chắn muốn HỦY bàn này không?")) {
         const index = listBooking.findIndex(b => b.email === email);
         if (index !== -1) {
-            listBooking[index].status = "cancelled";
+            // Xoá phần tử tại vị trí index
+            listBooking.splice(index, 1);
 
+            // Lưu lại vào localStorage
             localStorage.setItem("bookings", JSON.stringify(listBooking));
 
+            // Render lại danh sách + phân trang
             renderBookingList();
             renderPage();
         }
     }
 };
-
 const doneBooking = (email) => {
     if (confirm("Bàn được đặt đã hoàn thành ?")) {
         const index = listBooking.findIndex(b => b.email === email);

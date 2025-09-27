@@ -65,13 +65,13 @@ if (document.querySelector("#loginBtn")) {
         e.preventDefault();
         console.log("safs");
 
-        if (
-            accountLocal.find(
-                (account) =>
-                    account.email == document.querySelector("#loginUsername").value &&
-                    account.password == document.querySelector("#loginPassword").value
-            )
-        ) {
+        const target = accountLocal.find(
+            (account) =>
+                account.email == document.querySelector("#loginUsername").value &&
+                account.password == document.querySelector("#loginPassword").value)
+        if (target) {
+            console.log(target);
+            
             window.location.href = "./bookings.html";
         }
     });

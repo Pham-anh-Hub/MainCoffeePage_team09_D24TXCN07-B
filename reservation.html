@@ -119,13 +119,16 @@
                 </p>
                 <ul class="list-inline text-white m-0">
                   <li class="py-2">
-                    <i class="fa fa-check text-primary mr-3"></i> Save time with instant confirmation
+                    <i class="fa fa-check text-primary mr-3"></i> Save time with
+                    instant confirmation
                   </li>
                   <li class="py-2">
-                    <i class="fa fa-check text-primary mr-3"></i> Enjoy priority service at the café
+                    <i class="fa fa-check text-primary mr-3"></i> Enjoy priority
+                    service at the café
                   </li>
                   <li class="py-2">
-                    <i class="fa fa-check text-primary mr-3"></i> Exclusive online-only offers
+                    <i class="fa fa-check text-primary mr-3"></i> Exclusive
+                    online-only offers
                   </li>
                 </ul>
               </div>
@@ -153,26 +156,19 @@
                       required="required"
                     />
                   </div>
-                  <div class="form-group">
-                    <div>
-                      <input
-                        type="date"
-                        class="form-control bg-transparent border-primary p-4 date"
-                        placeholder="Date"
-                        data-target="#date"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div>
-                      <input
-                        type="date"
-                        class="form-control bg-transparent border-primary p-4 time"
-                        placeholder="Time"
-                        data-target="#time"
-                      />
-                    </div>
-                  </div>
+                  <!-- Ngày đến -->
+                  <input
+                    type="date"
+                    class="form-control bg-transparent border-primary p-4 reserve-date"
+                    placeholder="Reservation Date"
+                  />
+
+                  <!-- Giờ đến (nếu bạn muốn dùng, nếu không thì bỏ luôn input này) -->
+                  <input
+                    type="time"
+                    class="form-control bg-transparent border-primary p-4 reserve-time"
+                    placeholder="Reservation Time"
+                  />
                   <div class="form-group">
                     <select
                       class="custom-select bg-transparent border-primary px-4"
@@ -216,10 +212,13 @@
             Get In Touch
           </h4>
           <p>
-            <i class="fa fa-map-marker-alt mr-2"></i>45 Le Loi, District 1, Ho Chi Minh City
+            <i class="fa fa-map-marker-alt mr-2"></i>45 Le Loi, District 1, Ho
+            Chi Minh City
           </p>
           <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-          <p class="m-0"><i class="fa fa-envelope mr-2"></i>koppeeCafe@example.com</p>
+          <p class="m-0">
+            <i class="fa fa-envelope mr-2"></i>koppeeCafe@example.com
+          </p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
           <h4
@@ -327,5 +326,6 @@
 
     <!-- Template Javascript -->
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
