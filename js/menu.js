@@ -25,18 +25,27 @@ document.querySelectorAll(".list-modern-coffee > div").forEach(item => {
             img: coffeeImg
         }
 
+
+
         Swal.fire({
             title: "<strong>Bạn yêu thích món này?</strong>",
             icon: "info",
             showCloseButton: true,
             showCancelButton: true,
             focusConfirm: false,
-            confirmButtonText:
-                '<i class="fa fa-thumbs-up"></i> Great!',
+            confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
             confirmButtonAriaLabel: "Thumbs up, great!",
-            cancelButtonText:
-                '<i class="fa fa-thumbs-down"></i> Hủy',
-            cancelButtonAriaLabel: "Thumbs down"
+            cancelButtonText: '<i class="fa fa-thumbs-down"></i> Hủy',
+            cancelButtonAriaLabel: "Thumbs down",
+            background: "#fdf6f0", // nền be nhạt
+            color: "#4b2e2b", // chữ nâu đậm
+            customClass: {
+                popup: "coffee-popup",
+                title: "coffee-title",
+                confirmButton: "coffee-confirm",
+                cancelButton: "coffee-cancel",
+                closeButton: "coffee-close"
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 console.log("Người dùng bấm Thích 👍");

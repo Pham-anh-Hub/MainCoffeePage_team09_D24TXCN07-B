@@ -126,7 +126,7 @@ header {
   gap: 4rem;
 }
 
-.list-tradition-coffee{
+.list-tradition-coffee {
   margin-bottom: 4rem;
 }
 
@@ -296,4 +296,55 @@ header {
 
 .menu-section button:hover {
   transform: scale(1.2);
+}
+/* Popup chung */
+.coffee-popup {
+  border-radius: 18px;
+  border: 2px solid #d2b48c; /* nâu nhạt */
+  box-shadow: 0 8px 25px rgba(75, 46, 43, 0.25);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Tiêu đề */
+.coffee-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4b2e2b; /* nâu đậm */
+  text-shadow: 1px 1px 0 #e6d5c3;
+}
+
+/* Nút Confirm */
+.coffee-confirm {
+  background-color: #6f4e37 !important; /* nâu cà phê */
+  color: #fff !important;
+  border-radius: 12px !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  font-weight: bold !important;
+}
+.coffee-confirm:hover {
+  background-color: #5a3d2c !important;
+}
+
+/* Nút Cancel */
+.coffee-cancel {
+  background-color: #d2b48c !important; /* be caramel */
+  color: #4b2e2b !important;
+  border-radius: 12px !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  font-weight: bold !important;
+}
+.coffee-cancel:hover {
+  background-color: #c19a6b !important;
+  color: #fff !important;
+}
+
+/* Nút close (X) */
+.coffee-close {
+  color: #6f4e37 !important;
+  font-size: 20px !important;
+}
+.coffee-close:hover {
+  color: #4b2e2b !important;
 }
