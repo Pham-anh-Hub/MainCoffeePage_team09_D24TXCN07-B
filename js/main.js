@@ -1,3 +1,13 @@
+/**
+ * Bài tập nhóm 09 - D24TXCN07-B - Coffe Shop LandingPage & Coffee Orders
+ * Thành viên: 
+ * * Phạm Phương Anh - B24DTCN413
+ * * Tôn Phạm Quang Huy - B24DTCN423
+ * * Bùi ĐỨc Lợi - B24DTCN429
+ */
+
+
+
 const accountLocal = JSON.parse(localStorage.getItem("accounts")) || [];
 // Chờ khi trang web tải xong
 document.addEventListener("DOMContentLoaded", function () {
